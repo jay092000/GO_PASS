@@ -1,7 +1,7 @@
 :root
 {
-  --monLight : rgb(100, 38, 175);
-  --monDark : rgb(41, 19, 71);
+  --monLight : rgb(144,35,206);
+  --monDark : rgb(89, 17, 131);
   
 }
 
@@ -80,7 +80,7 @@ body {
 .middle_circle {
   position: absolute;
   top: 5px;
-  background-color: rgb(100, 38, 175);
+  background-color: var(--monLight);
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
@@ -91,7 +91,7 @@ body {
 .line {
   width: 100%;
   height: 6px;
-  background: rgb(100, 38, 175);
+  background: var(--monLight);
 }
 
 .ticket-container .middle_image {
@@ -151,7 +151,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 25px;
-  color: rgb(76, 29, 143); /* Initial color */
+  color: var(--monLight);/* Initial color */
   animation: validationColor 5s infinite; /* 6s loop */
 }
 
