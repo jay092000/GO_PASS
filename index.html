@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Top Section -->
+      <div class="top">
+        <div class="logo">
+          <img src="/assets/go_header_logo.svg" alt="GO Transit Logo" />
+        </div>
+        <div class="title">
+          <div class="marquee">
+            <div>
+              &#9679; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GO TRANSIT &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &#9679;
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <p>
+            Peterborough Bus Terminal to Union Station GO - $30 <br />
+            Weekday Group Pass for 2
+          </p>
+        </div>
+      </div>
+
+      <!-- Ticket Container -->
+      <div class="ticket-container">
+        <div class="middle_circle"></div>
+        <div class="line"></div>
+        <div class="middle_image">
+          <img src="/assets/middle_part.jpg" alt="Middle Part of the Ticket" />
+        </div>
+        <div class="time_number">
+          <div class="text">
+            Ticket Number: <span>MZ62743624</span>
+          </div>
+        </div>
+        <div class="validaion">
+          <div class="barcode">
+            <div class="barcode_image">
+              <img src="/assets/barcode.jpeg" alt="Barcode" />
+            </div>
+            <div class="barcode_text">
+              <span class="text">VALID FOR TRAVEL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time Container -->
+        <div class="time_container">
+          <div class="current_time">
+            <div class="header">CURRENT TIME:</div>
+            <div class="time" id="current_time"></div>
+          </div>
+          <div class="activation_time">
+            <div class="header">TIME SINCE ACTIVATION:</div>
+            <div class="time" id="timeSinceStarted"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="bottom">
+        <div class="bottom_header">
+          Please show this screen to the <br />
+          proper authority on board the train.
+        </div>
+        <div class="bottom_time">
+          <div class="bottom_time_text" id="timeRemaining"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

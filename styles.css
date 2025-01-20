@@ -1,0 +1,245 @@
+:root
+{
+  --monLight : rgb(100, 38, 175);
+  --monDark : rgb(41, 19, 71);
+  
+}
+
+
+body {
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+  animation: bodyColorMon 5s infinite;
+  overflow-x: hidden; /* Prevent horizontal scroll if elements overflow */
+  height: 100%;
+  position: relative;
+}
+.page 
+{
+  height: 100%;
+  position: relative;
+}
+.top .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 25px 0;
+  width: 100%;
+}
+
+.top .logo img {
+  width: 90px;
+  height: 45px;
+  z-index: 5;
+}
+
+.top .title {
+  max-width: 100%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center; /* Ensure proper centering */
+  margin: 0 auto; /* Center the title */
+}
+
+.top .title .marquee {
+  width: 100%;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.top .title .marquee div {
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+  padding-left: 100%;
+  display: inline-block;
+  animation: animate 10s linear infinite;
+}
+
+.top .description {
+  margin: 10px 0 30px 0;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+}
+
+.ticket-container {
+  background-color: #fff;
+  position: relative;
+  color: #464c55;
+  width: 100%; /* Ensure the container doesn't exceed the viewport */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.middle_circle {
+  position: absolute;
+  top: 5px;
+  background-color: rgb(100, 38, 175);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 40px;
+  border: 3px solid #fff;
+}
+
+.line {
+  width: 100%;
+  height: 6px;
+  background: rgb(100, 38, 175);
+}
+
+.ticket-container .middle_image {
+  width: 100%;
+}
+
+.ticket-container .middle_image img {
+  width: 100%;
+  object-fit: cover; /* Ensure image covers the container */
+}
+
+.ticket-container .time_number {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.ticket-container .time_number .text {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.ticket-container .time_number .text span {
+  font-weight: 700;
+  color: #464c55;
+}
+
+.ticket-container .validaion .barcode {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.ticket-container .validaion .barcode .barcode_image {
+  height: 60px;
+  position: relative;
+}
+
+.ticket-container .validaion .barcode .barcode_image img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%; /* Make the barcode responsive */
+  max-width: 1350px;
+  height: auto;
+}
+
+.ticket-container .validaion .barcode .barcode_text {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: rgb(76, 29, 143); /* Initial color */
+  animation: validationColor 5s infinite; /* 6s loop */
+}
+
+.time_container {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  height: auto;
+  margin: 15px 0;
+  width: 100%;
+  flex-direction: row;
+  box-shadow: rgb(255 255 255 / 24%) 0px 8px 8px;
+}
+
+.time_container .current_time {
+  flex: 20; /* Adjust flex for proportionate width */
+  margin: 10px 0;
+}
+
+.time_container .current_time .header,
+.time_container .activation_time .header {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+}
+
+.time_container .current_time .time,
+.time_container .activation_time .time {
+  font-weight: 600;
+  text-align: center;
+  font-size: 20px;
+}
+
+.time_container .activation_time {
+  flex: 12; /* Adjust flex for proportionate width */
+  margin: 10px 0;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  height: 125px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom_header {
+  font-size: 20px;
+}
+
+.bottom_time {
+  margin: 20px 0;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+@keyframes animate {
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes validationColor {
+  0% {
+    opacity: 0.1; /* Fully visible */
+  }
+  50% {
+    opacity: 1; /* Almost invisible */
+  }
+  100% {
+    opacity: 0.1; /* Back to fully visible */
+  }
+}
+
+@keyframes bodyColorMon {
+  0% {
+    background-color: var(--monDark);
+  }
+  50% {
+    background-color: var(--monLight);
+  }
+  100% {
+    background-color: var(--monDark);
+  }
+}
+
+.displayNone {
+  display: none;
+}
