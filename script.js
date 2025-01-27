@@ -1,7 +1,17 @@
 let currentTimeDiv = document.getElementById('current_time');
 let timeSinceStartedDiv = document.getElementById('timeSinceStarted');
 let timeRemainingDiv = document.getElementById('timeRemaining');
+const root = document.documentElement;
 
+
+const todaysDay = new Date().getDay();
+
+console.log(todaysDay)
+if(todaysDay == 4 )
+{
+  document.documentElement.style.setProperty('--monLight','rgb(59,102,234)');
+  document.documentElement.style.setProperty('--monDark','rgb(33,69,163)');
+}
 
 function calculateTime() {
   const now = new Date(); // Get the current date and time
@@ -29,7 +39,6 @@ function calculateTime() {
   // Calculate time passed since today's 6 AM
   const timePassed = now - sixAM;
 
-  console.log(timePassed);
   // Calculate time remaining until the next 6 AM
   const timeRemaining = nextSixAM - now;
 
@@ -54,6 +63,9 @@ function calculateTime() {
   currentTimeDiv.innerText = formatCurrentDateTime();
   timeSinceStartedDiv.innerText = passTimeString;
   timeRemainingDiv.innerText = remainingTimeString;
+
+
+  
 }
 
 // Helper function to add leading zeros
