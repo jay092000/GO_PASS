@@ -13,6 +13,12 @@ if(todaysDay == 4 )
   document.documentElement.style.setProperty('--monDark','rgb(33,69,163)');
 }
 
+if(todaysDay == 6 )
+  {
+    document.documentElement.style.setProperty('--monLight','rgb(72, 123, 144)');
+    document.documentElement.style.setProperty('--monDark','rgb(41, 73, 88)');
+  }
+
 function calculateTime() {
   const now = new Date(); // Get the current date and time
 

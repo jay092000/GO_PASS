@@ -10,7 +10,7 @@ body {
   font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0;
   margin: 0;
-  animation: bodyColorMon 5s infinite;
+  animation: bodyColorMon 2s infinite;
   overflow-x: hidden; /* Prevent horizontal scroll if elements overflow */
   height: 100%;
   position: relative;
@@ -142,7 +142,7 @@ body {
 
 .ticket-container .validaion .barcode .barcode_text {
   position: absolute;
-  top: 5px;
+  top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
@@ -152,7 +152,7 @@ body {
   justify-content: center;
   font-size: 25px;
   color: var(--monLight);/* Initial color */
-  animation: validationColor 5s infinite; /* 6s loop */
+  animation: validationColor 2s infinite; /* 6s loop */
 }
 
 .time_container {
@@ -195,7 +195,6 @@ body {
   position: absolute;
   bottom: 0px;
   color: #fff;
-  height: 125px;
   width: 100%;
   text-align: center;
 }
@@ -218,13 +217,13 @@ body {
 
 @keyframes validationColor {
   0% {
-    opacity: 0.1; /* Fully visible */
+    opacity: 0; /* Fully visible */
   }
   50% {
     opacity: 1; /* Almost invisible */
   }
   100% {
-    opacity: 0.1; /* Back to fully visible */
+    opacity: 0; /* Back to fully visible */
   }
 }
 
