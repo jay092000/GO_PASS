@@ -37,7 +37,7 @@ function calculateTime() {
     now.getFullYear(),
     now.getMonth(),
     now.getDate() + (now >= sixAM ? 1 : 0),
-    6,
+    4,
     0,
     0
   );
@@ -68,6 +68,7 @@ function calculateTime() {
   // Display the results
   currentTimeDiv.innerText = formatCurrentDateTime();
   timeSinceStartedDiv.innerText = passTimeString;
+  console.log(remainingTimeString)
   timeRemainingDiv.innerText = remainingTimeString;
 
 
