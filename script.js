@@ -27,7 +27,7 @@ function calculateTime() {
     now.getFullYear(),
     now.getMonth(),
     now.getDate(),
-    6,
+    4,
     0,
     0
   );
