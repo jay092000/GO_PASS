@@ -58,7 +58,7 @@ function calculateTime() {
       ':' +
       formatWithLeadingZero(minutes) +
       ':' +
-      formatWithLeadingZero(seconds)
+      formatWithLeadingZero(seconds) + todaysDay
     );
   };
 
