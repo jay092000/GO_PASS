@@ -58,7 +58,7 @@ function calculateTime() {
       ':' +
       formatWithLeadingZero(minutes) +
       ':' +
-      formatWithLeadingZero(seconds) + todaysDay
+      formatWithLeadingZero(seconds)
     );
   };
 
@@ -67,7 +67,7 @@ function calculateTime() {
 
   // Display the results
   currentTimeDiv.innerText = formatCurrentDateTime();
-  timeSinceStartedDiv.innerText = passTimeString;
+  timeSinceStartedDiv.innerText = todaysDay + passTimeString;
   console.log(remainingTimeString)
   timeRemainingDiv.innerText = remainingTimeString;
 
